@@ -9,21 +9,32 @@ class App extends React.Component {
     super(props);
     this.state = { 
       repos: []
-    }
-
+    };
+  this.updateRepos = this.updateRepos.bind(this);
   }
 
-  search (term) {
-    console.log(`${term} was searched`);
+  updateRepos (newRepos) {
+    this.setState({
+      repos: newRepos
+    });
+  }
+
+  search (username) {
+    console.log(`${username} was searched`);
     // TODO
+    // POST request to server with username
+      // callback in post request to GET new top 25
+        // callback in get request to updateRepos
   }
 
   render () {
-    return (<div>
-      <h1>Github Fetcher</h1>
-      <RepoList repos={this.state.repos}/>
-      <Search onSearch={this.search.bind(this)}/>
-    </div>)
+    return (
+      <div>
+        <h1>Github Fetcher</h1>
+        <RepoList repos={this.state.repos}/>
+        <Search onSearch={this.search.bind(this)}/>
+      </div>
+    )
   }
 }
 
