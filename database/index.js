@@ -16,7 +16,7 @@ let reposSchema = mongoose.Schema({
 let Repo = mongoose.model('Repo', reposSchema);
 
 let save = (data, cb) => {
-  var newData = data.map(repo => {
+  var formattedData = data.map(repo => {
     return {
       username: repo.owner.login,
       name: repo.name,
@@ -25,14 +25,22 @@ let save = (data, cb) => {
       updated: repo.updated_at
     }
   });
-  console.log('newData = ', newData);
-  Repo.insertMany(newData, function(err, docs) {
+
+  Repo.insertMany(formattedData, function(err, docs) {
     if (err) {
       console.log('error: ', err);
-    }else {
+    } else {
       console.log('data saved to db');
     }
   });
 };
 
+let getAll = (cb) => {
+  Repo.find().
+    limit(25).
+    sort('-updated').
+    exec(cb);
+};
+
 module.exports.save = save;
+module.exports.getAll = getAll;

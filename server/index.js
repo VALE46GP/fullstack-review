@@ -7,22 +7,31 @@ let bodyParser = require('body-parser');
 app.use(express.static(__dirname + '/../client/dist'));
 app.use(bodyParser.json());
 
-app.post('/repos', function (req, res) {
-  github.getReposByUsername(req.body.username, function(err, results) {
+// send back 25 repos with most recent updated_at property
+app.get('/repos', function (req, res) {
+  database.getAll(function(err, results) {
     if (err) {
-      console.log('error: ', err);
-      res.sendStatus(500);
+      res.status(500).send(err.message);
     } else {
-      console.log('typeof results = ', typeof JSON.parse(results));
-      database.save(JSON.parse(results));
-      res.sendStatus(201);
+      console.log('YOU DONE GOT A GET');
+      res.send(results);
     }
   });
 });
 
-app.get('/repos', function (req, res) {
-  // TODO - your code here!
-  // This route should send back the top 25 repos
+app.post('/repos', function (req, res) {
+  github.getReposByUsername(req.body.username, function(err, results) {
+    if (err) {
+      res.status(500).send(err.message);
+    } else {
+      // save data to db
+      database.save(JSON.parse(results));
+      // fetch updated results from db
+      //database.getAll();
+
+      res.sendStatus(201);
+    }
+  });
 });
 
 let port = 1128;
