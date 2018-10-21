@@ -9,11 +9,13 @@ let reposSchema = mongoose.Schema({
   username: String,
   name: String,
   id: { type: Number, unique: true },
-  url: String,
+  html_url: String,
   updated: Date
 });
 
 let Repo = mongoose.model('Repo', reposSchema);
+
+
 
 let save = (data, cb) => {
   var formattedData = data.map(repo => {
@@ -21,7 +23,7 @@ let save = (data, cb) => {
       username: repo.owner.login,
       name: repo.name,
       id: repo.id,
-      url: repo.url,
+      html_url: repo.html_url,
       updated: repo.updated_at
     }
   });
@@ -37,8 +39,8 @@ let save = (data, cb) => {
 
 let getAll = (cb) => {
   Repo.find().
-    limit(25).
     sort('-updated').
+    limit(25).
     exec(cb);
 };
 

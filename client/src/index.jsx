@@ -8,31 +8,86 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      repos: []
+      repos: [
+        {
+          "_id": "5bcb6b24d5cd37a25fdbe9d9",
+          "__v": 0,
+          "username": "hackreactor",
+          "name": "intro-coding",
+          "id": 52110598,
+          "html_url": "https://www.github.com/repos/hackreactor/intro-coding",
+          "updated": "2018-09-09T18:46:37.000Z"
+        },
+        {
+          "_id": "5bcb6b24d5cd37a25fdbe9dd",
+          "__v": 0,
+          "username": "hackreactor",
+          "name": "masters-full-stack",
+          "id": 144873541,
+          "html_url": "https://www.github.com/repos/hackreactor/masters-full-stack",
+          "updated": "2018-09-05T19:27:55.000Z"
+        }
+      ]
     };
-  this.updateRepos = this.updateRepos.bind(this);
+    this.updateRepos = this.updateRepos.bind(this);
+    this.getRepos = this.getRepos.bind(this);
   }
 
-  updateRepos (newRepos) {
+  updateRepos (data) {
     this.setState({
-      repos: newRepos
-    });
+      repos:data
+    })
+  }
+
+  getRepos () {
+    $.get('/repos', (data) => {
+      console.log('we out here getting repos', data);
+      this.updateRepos(data.results)
+    })
+      //.done(this.updateRepos(data))
+  }
+
+  componentWillMount() {
+    this.getRepos();
   }
 
   search (username) {
     console.log(`${username} was searched`);
-    // TODO
+    $.post('/repos', username)
+      .done(function(data) {
+        console.log('DATA typeof = ', data);
+
+      });
+
+
     // POST request to server with username
-      // callback in post request to GET new top 25
-        // callback in get request to updateRepos
+    // $.ajax({
+    //   method: "POST",
+    //   url: "/repos",
+    //   contentType: "application/json",
+    //   data: JSON.stringify({"username":username})
+    // })
+    //   .done(function( msg ) {
+    //     console.log( "Data Saved: " + msg );
+    //
+    //     //  GET request to update repos
+    //     $.ajax({
+    //       method: "GET",
+    //       url: "/repos"
+    //     })
+    //       .done(function( msg ) {
+    //         console.log( "Data Retrieved: " + typeof msg );
+    //
+    //       });
+    //   });
   }
 
   render () {
     return (
       <div>
         <h1>Github Fetcher</h1>
-        <RepoList repos={this.state.repos}/>
         <Search onSearch={this.search.bind(this)}/>
+        <RepoList repos={this.state.repos}/>
       </div>
     )
   }
