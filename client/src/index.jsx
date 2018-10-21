@@ -44,7 +44,6 @@ class App extends React.Component {
       console.log('we out here getting repos', data);
       this.updateRepos(data.results)
     })
-      //.done(this.updateRepos(data))
   }
 
   componentWillMount() {
@@ -54,32 +53,9 @@ class App extends React.Component {
   search (username) {
     console.log(`${username} was searched`);
     $.post('/repos', username)
-      .done(function(data) {
-        console.log('DATA typeof = ', data);
-
-      });
-
-
-    // POST request to server with username
-    // $.ajax({
-    //   method: "POST",
-    //   url: "/repos",
-    //   contentType: "application/json",
-    //   data: JSON.stringify({"username":username})
-    // })
-    //   .done(function( msg ) {
-    //     console.log( "Data Saved: " + msg );
-    //
-    //     //  GET request to update repos
-    //     $.ajax({
-    //       method: "GET",
-    //       url: "/repos"
-    //     })
-    //       .done(function( msg ) {
-    //         console.log( "Data Retrieved: " + typeof msg );
-    //
-    //       });
-    //   });
+      .done(() => {
+        this.getRepos();
+      })
   }
 
   render () {

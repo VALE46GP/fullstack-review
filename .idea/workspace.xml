@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="199117dd-4208-4f8c-9c6a-09c68b3943d0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/RepoList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/RepoList.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/data/db/WiredTiger.turtle" beforeDir="false" afterPath="$PROJECT_DIR$/database/data/db/WiredTiger.turtle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/data/db/WiredTiger.wt" beforeDir="false" afterPath="$PROJECT_DIR$/database/data/db/WiredTiger.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/data/db/_mdb_catalog.wt" beforeDir="false" afterPath="$PROJECT_DIR$/database/data/db/_mdb_catalog.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/data/db/collection-14-8722376342595114974.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/data/db/collection-4-8722376342595114974.wt" beforeDir="false" afterPath="$PROJECT_DIR$/database/data/db/collection-4-8722376342595114974.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/data/db/diagnostic.data/metrics.2018-10-19T18-07-28Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/database/data/db/diagnostic.data/metrics.2018-10-19T18-07-28Z-00000" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/data/db/diagnostic.data/metrics.interim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/data/db/index-15-8722376342595114974.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/data/db/index-16-8722376342595114974.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/data/db/index-5-8722376342595114974.wt" beforeDir="false" afterPath="$PROJECT_DIR$/database/data/db/index-5-8722376342595114974.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/data/db/index-6-8722376342595114974.wt" beforeDir="false" afterPath="$PROJECT_DIR$/database/data/db/index-6-8722376342595114974.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/data/db/journal/WiredTigerLog.0000000001" beforeDir="false" afterPath="$PROJECT_DIR$/database/data/db/journal/WiredTigerLog.0000000001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/data/db/mongod.lock" beforeDir="false" afterPath="$PROJECT_DIR$/database/data/db/mongod.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/data/db/sizeStorer.wt" beforeDir="false" afterPath="$PROJECT_DIR$/database/data/db/sizeStorer.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/client/dist/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -80,7 +61,7 @@
           <entry key="html" value="13" />
           <entry key="js" value="3255" />
           <entry key="json" value="1" />
-          <entry key="jsx" value="1661" />
+          <entry key="jsx" value="1698" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -88,7 +69,7 @@
           <entry key="CSS" value="15" />
           <entry key="HTML" value="13" />
           <entry key="JSON" value="1" />
-          <entry key="JSX Harmony" value="1661" />
+          <entry key="JSX Harmony" value="1698" />
           <entry key="JavaScript" value="3255" />
         </counts>
       </usages-collector>
@@ -105,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+            <state relative-caret-position="-13">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -123,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/src/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="250">
+              <caret line="60" column="13" lean-forward="true" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -188,8 +169,8 @@
         <option value="$PROJECT_DIR$/client/dist/styles.css" />
         <option value="$PROJECT_DIR$/client/src/components/Repo.jsx" />
         <option value="$PROJECT_DIR$/database/index.js" />
-        <option value="$PROJECT_DIR$/client/src/index.jsx" />
         <option value="$PROJECT_DIR$/server/index.js" />
+        <option value="$PROJECT_DIR$/client/src/index.jsx" />
       </list>
     </option>
   </component>
@@ -297,12 +278,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1539971659904</updated>
-      <workItem from="1539971661468" duration="41338000" />
+      <workItem from="1539971661468" duration="41719000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41338000" />
+    <option name="totallyTimeSpent" value="41719000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="480" y="22" width="960" height="878" extended-state="0" />
@@ -413,16 +394,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/RepoList.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -435,8 +406,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+        <state relative-caret-position="-13">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="60" column="13" lean-forward="true" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
